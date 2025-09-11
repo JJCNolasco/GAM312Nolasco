@@ -27,22 +27,23 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	// UFUNCTION() macro makes the function visible to Unreal's reflection system
 	UFUNCTION()
-		void MoveForward(float axisValue);
+		void MoveForward(float axisValue); // Function to move the character forward/backward
 
 	UFUNCTION()
-		void MoveRight(float axisValue);
+		void MoveRight(float axisValue); // Function to move the character right/left
 
 	UFUNCTION()
-		void StartJump();
+		void StartJump(); // Function to initiate jumping
 
 	UFUNCTION()
-		void StopJump();
+		void StopJump(); // Function to stop jumping
 
 	UFUNCTION()
-		void FindObject();
+		void FindObject(); // Function to find an object (implementation not shown)
 
 	UPROPERTY(VisibleAnywhere)
-		UCameraComponent* PlayerCamComp;
+		UCameraComponent* PlayerCamComp; // Camera component for the player character
 
 };
