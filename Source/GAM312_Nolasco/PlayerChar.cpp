@@ -41,6 +41,8 @@ void APlayerChar::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	playerUI->UpdateBars(Health, Hunger, Stamina); // Update the player's UI with current stats
+
 	// If the player is in building mode, update the position of the spawned building part to be in front of the camera
 	if (isBuilding)
 	{

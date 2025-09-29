@@ -8,6 +8,7 @@
 #include "Resource_M.h"
 #include "Kismet/GameplayStatics.h"
 #include "BuildingPart.h"
+#include "PlayerWidget.h"
 #include "PlayerChar.generated.h"
 
 UCLASS()
@@ -87,6 +88,9 @@ public:
 
 	UPROPERTY()
 		ABuildingPart* spawnedPart; // Reference to the currently spawned building part
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		UPlayerWidget* playerUI; // Reference to the player's UI widget
 
 	UFUNCTION(BlueprintCallable)
 		void SetHealth(float amount); // Function to set health
